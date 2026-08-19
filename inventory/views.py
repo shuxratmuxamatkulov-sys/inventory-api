@@ -8,14 +8,14 @@ class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = [AllowAny]
-    authentication_classes = []  # Autentifikatsiya cheklovini to'liq o'chirish
+    authentication_classes = []
 
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = [AllowAny]
-    authentication_classes = []  # Autentifikatsiya cheklovini to'liq o'chirish
+    authentication_classes = []
 
 
 class TransactionViewSet(viewsets.ModelViewSet):
