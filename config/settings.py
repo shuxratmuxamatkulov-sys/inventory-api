@@ -114,7 +114,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # REST Framework Sozlamalari (YANGILANDI)
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
     ),
@@ -122,8 +124,8 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Inventory Management API',
-    'DESCRIPTION': 'Ombor va mahsulotlar hisobi uchun REST API',
+    'TITLE': 'Fen Textile',
+    'DESCRIPTION': 'Fen Textile ombor va mahsulotlar hisobi uchun REST API',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
